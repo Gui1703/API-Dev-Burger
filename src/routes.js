@@ -12,10 +12,10 @@ const upload = multer(multerConfig)
 
 const routes = new Router()
 
-// Usuário
+// Cadastro
 routes.post("/users", UserController.store)
 
-// Sessão
+// Login
 routes.post("/sessions", SessionController.store)
 
 routes.use(authMiddleware) // Será chamado por todas as rotas abaixo
@@ -24,6 +24,8 @@ routes.use(authMiddleware) // Será chamado por todas as rotas abaixo
 routes.post("/products", upload.single("file"), ProductController.store)
 
 routes.get("/products", ProductController.index)
+
+routes.put("/products/:id", upload.single("file"), ProductController.update)
 
 // Categorias
 routes.post("/categories", CategoryController.store)
