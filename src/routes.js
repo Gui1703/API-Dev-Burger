@@ -28,9 +28,11 @@ routes.get("/products", ProductController.index)
 routes.put("/products/:id", upload.single("file"), ProductController.update)
 
 // Categorias
-routes.post("/categories", CategoryController.store)
+routes.post("/categories", upload.single("file"), CategoryController.store)
 
 routes.get("/categories", CategoryController.index)
+
+routes.put("/categories/:id", upload.single("file"), CategoryController.update)
 
 // Pedido
 routes.post("/orders", OrderController.store)
