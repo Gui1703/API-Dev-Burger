@@ -4,7 +4,7 @@
 
 </div>
 
-<h1 align="center">Api Code Burger</h1>
+<h1 align="center">Api Dev Burger</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/Gui1703/API-Dev-Burger?color=56BEB8">
